@@ -23,7 +23,6 @@ const FeedbackSchema = Yup.object().shape({
 const ContactForm = ({ addContact }) => {
   const handleSubmit = (values, actions) => {
     values.id = nanoid();
-    console.log(values);
     addContact(values);
     actions.resetForm();
   };

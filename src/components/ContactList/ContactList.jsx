@@ -1,10 +1,7 @@
 import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
-import { useState } from 'react';
 
-const ContactList = ({ contacts, onDelete }) => {
-  const [deletedId, setDeletedId] = useState('');
-
+const ContactList = ({ contacts, onDelete, deletedId, setDeletedId }) => {
   return (
     <ul className={css.contactList}>
       {contacts.map(({ id, name, number }) => (
@@ -19,7 +16,7 @@ const ContactList = ({ contacts, onDelete }) => {
             number={number}
             id={id}
             onDelete={onDelete}
-            handleId={setDeletedId}
+            setDeletedId={setDeletedId}
           />
         </li>
       ))}
