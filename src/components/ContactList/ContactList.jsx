@@ -7,9 +7,9 @@ const ContactList = ({ contacts, onDelete, deletedId, setDeletedId }) => {
       {contacts.map(({ id, name, number }) => (
         <li
           key={id}
-          className={
-            (css.contactListItem, deletedId === id ? css.slideOut : '')
-          }
+          className={`${css.contactListItem} ${
+            deletedId === id ? css.slideOut : ''
+          }`}
         >
           <Contact
             name={name}
