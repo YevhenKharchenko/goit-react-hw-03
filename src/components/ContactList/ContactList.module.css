@@ -1,0 +1,14 @@
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactListItem {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slideOut {
+  transform: translateX(-300%);
+}

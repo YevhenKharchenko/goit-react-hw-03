@@ -13,7 +13,8 @@ const initialContacts = [
 function App() {
   const [contacts, setContacts] = useState(() => {
     const savedContacts = window.localStorage.getItem('contacts');
-    return JSON.parse(savedContacts) ?? [];
+    // return JSON.parse(savedContacts) ?? initialContacts;
+    return initialContacts;
   });
   const [filter, setFilter] = useState('');
 
